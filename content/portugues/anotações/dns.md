@@ -13,9 +13,9 @@ slug: ""
 draft: false # draft or not
 comments: true
 showToc: true # show contents
-TocOpen: true # open contents automantically
+TocOpen: false # open contents automantically
 hidemeta: false # hide information (author, create date, etc.)
-disableShare: true	# do not show share button
+disableShare: false	# do not show share button
 showbreadcrumbs: true # show current path
 ---
 
