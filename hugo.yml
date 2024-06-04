@@ -12,7 +12,8 @@ buildExpired: false
 paginate: 10
 
 permalinks:
-  notes: "/notes/:year/:month/:day/"
+  notes: "/notes/:title/:year/:month/:day/"
+  anotações: "/anotações/:title/:year/:month/:day/"
   pages: "/:title"
 
 defaultContentLanguage: en
