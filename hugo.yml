@@ -1,0 +1,150 @@
+baseURL: https://lfelipeee.github.io/
+languageCode: en
+title: lfelipeee's Notebooks
+theme: PaperMod
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+#googleAnalytics: 
+
+paginate: 10
+
+permalinks:
+  notes: "/notes/:year/:month/:day/"
+  pages: "/:title"
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: "Translate to English"
+    contentDir: content/english
+    weight: 1
+    params:
+      profileMode:
+        enabled: true
+        title: Hello, World!
+        subtitle: "Welcome to my study notes storage!"
+        buttons:
+          - name: Notes
+            url: notes
+
+          - name: Search
+            url: search
+
+          - name: About me
+            url: about_me
+    
+    menus:
+      main:
+        - identifier: Notes
+          name: Notes
+          url: notes
+          weight: 1
+
+        - identifier: Search
+          name: Search
+          url: search
+          weight: 2
+
+        - identifier: About_me
+          name: About me
+          url: about_me
+          weight: 3
+
+  pt:
+    languageName: "Traduzir para Português"
+    contentDir: content/portugues
+    weight: 2
+    params:
+      profileMode:
+        enabled: true
+        title: Olá, Mundo!
+        subtitle: "Bem-vindo ao meu armazém de anotações de estudo!"
+        buttons:
+          - name: Anotações
+            url: anotações
+          
+          - name: Pesquisar
+            url: pesquisar
+
+          - name: Sobre mim
+            url: sobre_mim
+    
+    menu:
+      main:
+        - identifier: Notes
+          name: Anotações
+          url: anotações
+          weight: 1
+
+        - identifier: Search
+          name: Pesquisar
+          url: pesquisar
+          weight: 2
+
+        - identifier: About_me
+          name: Sobre mim
+          url: sobre_mim
+          weight: 3
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: Luiz Felipe
+  author: Luiz Felipe
+
+  defaultTheme: auto
+  disableThemeToggle: false
+  DateFormat: "2006-01-02"
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: false
+  ShowCodeCopyButtons: true
+  VisitCount: true
+  ShowLastMod: true
+  ShowToc: true
+  TocOpen: true
+
+  displayFullLangName: true
+
+  comments: false
+
+  socialIcons:
+  - name: github
+    url: "https://github.com/lfelipeee"
+
+  - name: linkedin
+    url: "https://linkedin.com/in/luizfelipevieiramanha/"
+
+  fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 1
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary"]
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+    highlight:
+      codeFences: true
+      guessSyntax: true
+      lineNos: true
+      style: monokai
