@@ -14,4 +14,4 @@ muito cedo e sempre gostei muito. Hoje em dia estou engajado em estudos na área
 
 ### Minha proposta com esse website.
 
-Fiz esse website para organizar e compartilhar minhas anotações feitas durante meus períodos de estudo, espero que essas anotações ajudem alguém que está seguindo pelo mesmo caminho que o meu, e também para reforçar meu próprio conhecimento, afinal quando transmitimos conhecimento é quando realmente aprendemos e reforçamos nosso próprio conhecimento.
+Fiz esse website para organizar e compartilhar minhas anotações feitas durante meus períodos de estudo, espero que essas anotações ajudem alguém que está seguindo pelo mesmo caminho que o meu, e também para reforçar meu próprio conhecimento, afinal quando transmitimos conhecimento é quando realmente aprendemos.

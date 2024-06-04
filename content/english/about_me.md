@@ -13,4 +13,4 @@ My name is Luiz Felipe, I'm 20 years old, I'm a Brazilian student who has always
 
 ### My pourpose with this website.
 
-I made this website to organize and share my notes made during my periods of study, I hope these notes help someone who is following the same path as me, and also to reinforce my own knowledge, after all, when we transmit knowledge is when we really learn and reinforce our own knowledge.
+I made this website to organize and share my notes made during my periods of study, I hope these notes help someone who is following the same path as me, and also to reinforce my own knowledge, after all, when we transmit knowledge is when we really learn.
