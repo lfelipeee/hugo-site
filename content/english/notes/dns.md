@@ -20,14 +20,14 @@ showbreadcrumbs: true # show current path
 ### What is DNS?
 The DNS (Domain Name System) converts human-readable domain names into machine-readable IP addresses.
 
-
 All devices on the internet use unique numerical addresses assigned to each one to locate and communicate with each other. These numbers are known as IP addresses. An IP address can be something like 192.168.100.1 (IPv4), consisting of four sets of numbers between 0 and 255 separated by periods, or it can be a more complex and recent alphanumeric version like 2001:0db8:85a3:0000:0000:8a2e:0370:7334 (IPv6).
-
 
 When we browse the internet using a web browser, we don't need to enter a long and complicated number; just a domain is enough to find what we want.
 
+
 ### DNS Service
 The DNS is a fundamental component of the internet's infrastructure, globally distributed, that essentially functions like a phone book, managing the mapping between domain names and their respective IP addresses. DNS servers convert domain name requests into IP addresses, controlling which server the end user will connect to when entering a domain name in browser. These requests made by the client to a DNS server are called **queries**.
+
 
 ### Types of DNS Service
 
@@ -36,6 +36,24 @@ When a client makes a query, the recursive DNS server acts as an intermediary to
 
 #### Authoritative DNS
 The authoritative DNS has the final authority over the domain and is responsible for providing responses to recursive DNS servers with IP address information of specific domain names. They are also used by administrators to manage public DNS names.
+
+##### Types of Authoritative DNS Records
+There are several types of authoritative DNS records that provide different types of information. Some of the most common are:
+
+* **A Record:** Maps a domain name to an IPv4 address.
+
+* **AAAA Record:** Maps a domain name to an IPv6 address.
+
+* **MX (Mail Exchange) Record:** Directs emails to mail servers for the domain.
+
+* **CNAME (Canonical Name) Record:** Aliases one domain name to another, allowing for aliasing.
+
+* **TXT Record:** Stores arbitrary text that can be used for various purposes, including domain verification and configuration information.
+
+* **NS (Name Server) Record:** Specifies the authoritative name servers for the domain.
+
+* **PTR (Pointer) Record:** Used for reverse DNS lookups, mapping an IP address to a domain name.
+
 
 ### How DNS works
 Four DNS servers are involved in loading internet content. These servers operate in a distributed and hierarchical manner:

@@ -37,6 +37,23 @@ Quando um cliente faz uma consulta, o servidor DNS recursivo age como um interme
 #### DNS Autoritativo
 O DNS autoritativo tem a autoridade final sobre o domínio, sendo responsável por fornecer respostas aos servidores DNS recursivos com informações de endereços IP de nomes de domínio específicos. Também são utilizados por administradores para gerenciar nomes DNS públicos.
 
+##### Tipos de Registros DNS Autoritativos
+Existem vários tipos de registros DNS autoritativos que fornecem diferentes tipos de informações. Alguns dos mais comuns são:
+
+* **Registro A:** Mapeia um nome de domínio para um endereço IPv4.
+
+* **Registro AAAA:** Mapeia um nome de domínio para um endereço IPv6.
+
+* **Registro MX (Mail EXchange):** Direciona emails para servidores de correio eletrônico para o domínio.
+
+* **Registro CNAME (Canonical Name):** Alia um nome de domínio a outro nome de domínio, permitindo aliasing.
+
+* **Registro TXT:** Armazena texto arbitrário que pode ser usado para vários propósitos, incluindo verificação de domínio e informações de configuração.
+
+* **Registro NS (Name Server):** Especifica os servidores de um nome para o domínio.
+
+* **Registro PTR (Pointer):** Utilizando para resoluções reversas de DNS, mapeando um endereço IP a um nome de domínio.
+
 
 ### Como Funciona o DNS
 Quatro servidores DNS estão envolvidos no carregamento de um conteúdo da internet. Esses servidores operam de forma distribuída e hierárquica:
