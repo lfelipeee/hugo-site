@@ -7,7 +7,6 @@ categories:
 tags: 
 - dns
 - rede
-showTags: false
 description: "Explicação sobre dns"
 weight: # 1 means pin the article, sort articles according to this number
 slug: ""
@@ -69,4 +68,4 @@ São responsáveis por armazenar os registros DNS, o servidor DNS autoritativo c
 
 ### Esquema do funcionamento dos serviços DNS
 
-![DNS-esquema-pt](hugo-site/static/imagens/dns-pt.png)
+![DNS-esquema-pt](/imagens/dns-pt.png)
