@@ -68,4 +68,4 @@ São responsáveis por armazenar os registros DNS, o servidor DNS autoritativo c
 
 ### Esquema do funcionamento dos serviços DNS
 
-![DNS-esquema-pt](https://lfelipeee.github.io/imagens/dns-pt.png)
+![DNS-esquema-pt](https://github.com/lfelipeee/hugo-site/imagens/dns-pt.png)
