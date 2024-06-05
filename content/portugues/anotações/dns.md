@@ -4,7 +4,6 @@ date: "2024-06-05"
 author: ["Luiz Felipe"]
 categories: 
 - rede
-description: "Explicação sobre dns"
 weight: # 1 means pin the article, sort articles according to this number
 slug: ""
 draft: false # draft or not
@@ -78,7 +77,7 @@ Responsáveis por armazenar os registros DNS, os servidores DNS autoritativos co
 
 8. O Servidor Autoritativo responde com o endereço IP para o nome de domínio solicitado.
 
-9. O Recursor DNS encaminha o endereço para a máquina do usuário final.
+9. O Recursor DNS encaminha o endereço IP para a máquina do usuário final.
 
 10. O navegador web faz a solicitação dos recursos encontrados no IP informado por meio do protocolo HTTP.
 

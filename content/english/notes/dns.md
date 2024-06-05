@@ -1,17 +1,13 @@
 ---
 title: "DNS"
-date: "2024-06-03"
+date: "2024-06-05"
 author: ["Luiz Felipe"]
 categories: 
 - network
-tags: 
-- dns
-- services
-# description: 
 weight: # 1 means pin the article, sort articles according to this number
 slug: ""
 draft: false # draft or not
-comments: true
+comments: false
 showToc: true # show contents
 TocOpen: false # open contents automantically
 hidemeta: false # hide information (author, create date, etc.)
@@ -21,7 +17,7 @@ showbreadcrumbs: true # show current path
 
 
 
-### what is DNS?
+### What is DNS?
 The DNS (Domain Name System) converts human-readable domain names into machine-readable IP addresses.
 
 
