@@ -23,6 +23,7 @@ languages:
   en:
     languageName: "Translate to English"
     contentDir: content/english
+    staticDir: static/images
     weight: 1
     params:
       profileMode:
@@ -59,6 +60,7 @@ languages:
   pt:
     languageName: "Traduzir para Português"
     contentDir: content/portugues
+    staticDir: static/imagens
     weight: 2
     params:
       profileMode:
