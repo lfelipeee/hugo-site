@@ -25,27 +25,34 @@ Todos os dispositivos presentes na internet utilizam endereços numéricos únic
 
 Quando navegamos pela internet utilizando um navegador web, não precisamos informar um número longo e complicado; apenas um nome de domínio é suficiente para encontrar o que desejamos.
 
+
 ### Serviço DNS
-O DNS é um componente fundamental na infraestrutura da internet, globalmente distribuído, que funciona basicamente como uma agenda telefônica, gerenciando o mapeamento entre nomes de domínio e seus respectivos endereços IP. Os servidores DNS convertem solicitações de nomes em endereços IP, controlando a qual servidor o usuário final irá se conectar quando digitar um nome de domínio no navegador. Essas solicitações feitas pelo cliente para um servidor DNS são chamadas de consultas.
+O DNS é um componente fundamental na infraestrutura da internet, globalmente distribuído, que funciona basicamente como uma agenda telefônica, gerenciando o mapeamento entre nomes de domínio e seus respectivos endereços IP. Os servidores DNS convertem solicitações de nomes em endereços IP, controlando a qual servidor o usuário final irá se conectar quando digitar um nome de domínio no navegador. Essas solicitações feitas pelo cliente para um servidor DNS são chamadas de **consultas**.
+
 
 ### Tipos de Serviço DNS
+
 #### DNS Recursivo
 Quando um cliente faz uma consulta, o servidor DNS recursivo age como um intermediário para obter as informações de DNS e responder à solicitação. Se a referência do DNS solicitada estiver armazenada no cache do servidor recursivo, ele responderá à consulta diretamente. Caso contrário, encaminhará a consulta para um ou mais servidores DNS autoritativos até obter todas as informações necessárias para responder ao cliente.
 
 #### DNS Autoritativo
 O DNS autoritativo tem a autoridade final sobre o domínio, sendo responsável por fornecer respostas aos servidores DNS recursivos com informações de endereços IP de nomes de domínio específicos. Também são utilizados por administradores para gerenciar nomes DNS públicos.
 
-### Como Funciona o DNS?
+
+### Como Funciona o DNS
 Quatro servidores DNS estão envolvidos no carregamento de um conteúdo da internet. Esses servidores operam de forma distribuída e hierárquica:
 
 1. Recursor de DNS:
 É o ponto de contato inicial do seu dispositivo com os servidores DNS. Ele é projetado para receber solicitações de máquinas clientes por meio de aplicações como navegadores web. O recursor é responsável por fazer solicitações adicionais ao resto da infraestrutura DNS para atender à solicitação do cliente. Frequentemente é fornecido pelo seu Provedor de Internet (ISP) ou por um serviço de terceiros, como o Google Public DNS.
 
+
 2. Servidor-raiz:
 No topo da hierarquia, os servidores raiz realizam o primeiro passo da resolução de nome de domínio em endereço IP. Eles orientam consultas DNS para os servidores de domínio de nível superior apropriados.
 
+
 3. Servidor de Domínio de Nível Superior (TLD):
 Esses servidores guardam as informações da última parte da URL (.com, .net, .org, .gov). Eles respondem a consultas DNS com o endereço do servidor DNS autoritativo correspondente.
+
 
 4. Servidor DNS Autoritativo:
 Responsáveis por armazenar os registros DNS, os servidores DNS autoritativos conhecem o endereço do nome de domínio específico solicitado e não necessitam fazer consulta ou redirecionamento a outros servidores para responder a solicitações com o endereço IP.
