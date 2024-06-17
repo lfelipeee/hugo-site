@@ -127,7 +127,7 @@ params:
     url: "https://github.com/lfelipeee"
 
   - name: linkedin
-    url: "https://linkedin.com/in/luizfelipevieiramanha/"
+    url: "https://linkedin.com/in/luizfelipemanha/"
 
   fuseOpts:
         isCaseSensitive: false
