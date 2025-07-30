@@ -78,4 +78,4 @@ jobs:
         git config user.email "github-actions@github.com"
         git add content/english/ content/portuguese/
         git commit -m "Sync notes from 'estudos'" || echo "Nothing new to commit"
-        git push
+        git push"# comment" 
