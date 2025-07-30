@@ -1,0 +1,81 @@
+name: Sync Obsidian Notes to Hugo
+
+on:
+  schedule:
+    - cron: '30 10 * * *' # 07:30 (UTC-3)
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Hugo site repo
+      uses: actions/checkout@v3
+
+    - name: Clone Obsidian notes repo
+      uses: actions/checkout@v3
+      with:
+        repository: lfelipeee/estudos
+        token: ${{ secrets.NOTES_REPO_TOKEN }}
+        path: estudos
+
+    - name: Process .md files (ignore \#draft, add front matter)
+      run: |
+        mkdir -p content/english content/portuguese
+
+        cd estudos
+
+        for file in *.md; do
+          #ignora arquivos com tag #draft
+          if grep -q '#draft' "$file"; then
+            echo "Ignorando $file (draft)"
+            continue
+          fi
+
+          if grep -iq '#english' "$file"; then
+            lang="english"
+          elif grep -iq '#portugues' "$file"; then
+            lang="portuguese"
+          else
+            echo "Ignorando $file (sem tag de idioma)"
+            continue
+          fi
+
+          # Obter data do último commit
+          commit_date=$(git log -1 --format="%cd" --date=format:"%Y-%m-%d" -- "$file")
+
+          # Extrair título
+          title=$(basename "$file" .md | sed 's/-/ /g' | sed 's/_/ /g' | sed 's/.*/\u&/')
+
+          # Verificar presenca de front matter
+          if grep -q '^---' "$file"; then
+            echo "$file ja tem front matter"
+            cp "$file" ../content/$lang/
+          else
+            echo "Adicionando front matter em $file"
+            {
+              echo "---"
+              echo "title: \"$title\""
+              echo "date: $commit_date"
+              echo "draft: false"
+              echo "comments: false"
+              echo "showToc: true"
+              echo "TocOpen: true"
+              echo "hidemeta: false"
+              echo "disableShare: true"
+              echo "---"
+              cat "$file"
+            } > "../content/posts/$file"
+          fi
+        done
+
+        cd ..
+      
+    - name: Commit and push to Hugo repo
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add content/english/ content/portuguese/
+        git commit -m "Sync notes from 'estudos'" || echo "Nothing new to commit"
+        git push
