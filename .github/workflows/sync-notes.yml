@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout Hugo site repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Clone Obsidian notes repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         repository: lfelipeee/estudos
         token: ${{ secrets.NOTES_REPO_TOKEN }}
